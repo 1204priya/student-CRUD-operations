@@ -70,7 +70,7 @@ res.status(200).send(allStudents);
 //updating student data using id
 export const updateStudents=async(req,res)=>{
     try{
-        const Student = await student.findOne({id:req.body.id});
+        const Student = await student.findOne({id:req.params.id});
 
         Student.name = req.body.name != undefined ? req.body.name : Student.name;
         Student.email = req.body.email != undefined ? req.body.email : Student.email;

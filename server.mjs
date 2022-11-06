@@ -19,7 +19,7 @@ db.on('error',()=>{
     console.log("error while connecting to mongoDb");
 });
 db.once('open',()=>{
-    init();
+   // init();
     console.log("connected to mongodb");
 });
 
